@@ -1,0 +1,34 @@
+security:
+    enable_authenticator_manager: true #permite el acceso anonimo
+
+    password_hashers:
+        App\Entity\Usuarios:
+            algorithm: "auto" # Symfony seleccionará el mejor algoritmo
+
+    providers:
+        app_user_provider:
+            entity:
+                class: App\Entity\Usuarios
+                property: nombre
+
+    firewalls:
+        api_login:
+            pattern: ^/api/login
+            stateless: true
+            json_login:
+                check_path: /api/login_check
+                success_handler: lexik_jwt_authentication.handler.authentication_success #app.security.authentication_success_handler
+                failure_handler: lexik_jwt_authentication.handler.authentication_failure
+
+        api:
+            pattern: ^/Admin
+            stateless: true
+            jwt: ~
+
+        main:
+            lazy: true
+            provider: app_user_provider
+
+    access_control:
+        - { path: ^/api/login, roles: PUBLIC_ACCESS }
+        - { path: ^/Admin, roles: IS_AUTHENTICATED_FULLY }
