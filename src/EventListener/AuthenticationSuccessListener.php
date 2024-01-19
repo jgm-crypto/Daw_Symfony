@@ -9,8 +9,8 @@ use Symfony\Component\Security\Core\User\UserInterface;
 class AuthenticationSuccessListener
 {
     /**
-     * This method is called when the `lexik_jwt_authentication.on_authentication_success` 
-     * event is dispatched.
+     * Este metodo se llama cuando `lexik_jwt_authentication.on_authentication_success` 
+     * se ejecuta.
      *
      * @param AuthenticationSuccessEvent $event
      */
@@ -24,7 +24,6 @@ class AuthenticationSuccessListener
             return;
         }
 
-        // Modify data to include user roles
         $data['data'] = array(
             'status' => 'OK',
             'roles' => $user->getRoles(),

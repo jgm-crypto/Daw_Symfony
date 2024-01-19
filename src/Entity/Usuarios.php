@@ -37,11 +37,23 @@ class Usuarios implements UserInterface, PasswordAuthenticatedUserInterface
      */
     private $pass;
 
+    /**
+     * @var array|null
+     *
+     * @ORM\Column(name="roles", type="json", nullable=true)
+     */
+    private $roles = [];
+
 
     public function getRoles(): array
     {
-        return ['ROLE_USER'];
-        // devuelve los roles del usuario
+        return $this->roles;
+    }
+
+    public function setRoles(array $roles): self
+    {
+        $this->roles = $roles;
+        return $this;
     }
 
     public function getSalt()
