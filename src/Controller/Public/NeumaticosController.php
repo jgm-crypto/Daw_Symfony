@@ -39,8 +39,8 @@ class NeumaticosController extends AbstractController
     {
         $neumaticos = $neumaticosRepository->getNeuByMarca($marca);
         $res = new JsonResponse($neumaticos);
-
         $logger->info('Result-->>' . print_r($res, true));
+
 
         return $res;
     }

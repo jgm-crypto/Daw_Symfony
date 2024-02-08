@@ -1,0 +1,1 @@
+Symfony es un marco de desarrollo (framework) de aplicaciones web en PHP. Es de código abierto y está diseñado para facilitar el desarrollo de aplicaciones web complejas.

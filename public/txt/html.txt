@@ -1,0 +1,2 @@
+HTML, acrónimo en inglés de HyperText Markup Language, hace referencia al lenguaje de marcado utilizado en la creación de páginas web.
+Este estándar que sirve de referencia del software que interactúa con la elaboración de páginas web en sus diferentes versiones.

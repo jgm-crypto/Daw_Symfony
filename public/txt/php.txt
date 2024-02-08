@@ -1,0 +1,3 @@
+PHP, acrónimo de 'PHP: Hypertext Preprocessor', es un popular lenguaje de programación de código abierto, 
+especialmente adecuado para el desarrollo web y que se puede incrustar en HTML. 
+Fue creado por Rasmus Lerdorf en 1994 y desde entonces ha evolucionado significativamente.

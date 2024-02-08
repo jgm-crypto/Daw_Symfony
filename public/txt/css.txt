@@ -1,0 +1,2 @@
+CSS, en español «Hojas de estilo en cascada», 
+es un lenguaje de diseño gráfico para definir y crear la presentación de un documento estructurado escrito en un lenguaje de marcado.​
